@@ -1,0 +1,46 @@
+<div class="body">
+  <div class="card w-75 center-h">
+    <div class="card-body" *ngIf="!dataRetrieved">
+      <h1 *ngIf="!dataRetrieved" class="vertical-center">No Data to Display</h1>
+    </div>
+    <div class="card-body" [hidden]="!dataRetrieved">
+      <div [hidden]="selectedChartType !== 'Pie'">
+        <h2>Pie Chart</h2>
+        <figure id="pie"></figure>
+      </div>
+      <div [hidden]="selectedChartType !== 'Donut'">
+        <h2>Donut Chart</h2>
+        <figure id="donut"></figure>
+      </div>
+    </div>
+  </div>
+  <div class="w-75 center-h d-buttons">
+    <button type="button" class="btn btn-primary" (click)="getData()">Get Data</button>
+    <input
+      *ngIf="dataRetrieved"
+      type="color"
+      class="m-r-10"
+      [value]="color"
+      (change)="getColor($event)">
+    <!-- <label
+      *ngIf="dataRetrieved"
+      class="colorBtn m-r-10"
+      [style.background]="color"
+      for="color"></label> -->
+    <div class="btn-group" *ngIf="dataRetrieved">
+      <button class="btn btn-primary btn-sm" type="button" data-mdb-toggle="dropdown">{{ selectedChartType || 'Select Chart Type' }}</button>
+      <button
+        type="button"
+        class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#" (click)="selectType('Donut')">Donut</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectType('Pie')">Pie</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+.body {
+  height: 100%;
+  margin: auto;
+}
+
+.btn-group {
+  width: 15%;
+}
+
+.card {
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  // height: 30%;
+  align-items: center;
+}
+
+// #color {
+//   opacity: 0;
+//   pointer-events: none;
+//   height: 50px;
+// }
+
+// .colorBtn {
+//   display: inline-block;
+//   height: 50px;
+//   width: 50px;
+//   border-radius: 25px;
+//   // background: turquoise;
+//   border: 1px solid grey;
+// }
+
+// /* you'll want to add some interaction styles */
+// .colorBtn:hover,
+// #color:focus + .colorBtn {
+//   border-color: black;
+//   cursor: pointer;
+// }
+
+// #color:active + .colorBtn {
+//   filter: brightness(90%);
+// }
+
+.center-h {
+  // display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.d-buttons {
+  display: flex;
+  flex-direction: row;
+
+  input {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  input:hover {
+    cursor: pointer;
+  }
+
+  .dropdown-toggle {
+    margin-right: 0;
+  }
+}

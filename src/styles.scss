@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Customer css
+.f-right {
+  float: right;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.logo {
+  max-width: 10%;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

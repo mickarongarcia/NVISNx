@@ -1,27 +1,13 @@
-# NvisnxVisualization
+1. What is your strategy for handling large amounts of data returned by an API? How does it
+impact the user experience?
+-- In cases where API call returns large amount of data, we can create an asynchronous function that will allow the user to perform other tasks and not create some blocks. We can use some loading behaviors to inform users that something is happening in the background.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+2. Say you’ve received data from an API, and you want to supply a sorting option to it within
+your typescript or JavaScript. Give an example of how you might go about doing this.
+-- We can perform sorting on the actual data returned by the API call. For example using the Array.sort() method.
 
-## Development server
+3. How would you attach an event to a component?
+-- By using Angular's event binding. We can track different events that happened on an element. For components, we can use the EventEmitter assigned to an @Output variable that is triggered by the emit() function.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Can you cancel an http request? If yes, how?
+-- By unsubscribing to the get() before it returns a data.
